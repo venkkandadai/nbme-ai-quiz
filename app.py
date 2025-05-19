@@ -4,9 +4,10 @@ import json
 import pandas as pd
 import time
 import plotly.express as px
+import os
 
 # Initialize OpenAI client
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Initialize session state variables
 if "quiz_started" not in st.session_state:
